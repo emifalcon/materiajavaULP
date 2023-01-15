@@ -1,0 +1,129 @@
+/*
+2. Declarar una clase llamada Circunferencia que tenga como atributo privado el radio
+de tipo real. A continuación, se deben crear los siguientes métodos:
+a) Método constructor que inicialice el radio pasado como parámetro.
+b) Métodos get y set para el atributo radio de la clase Circunferencia.
+c) Método para crearCircunferencia(): que le pide el radio y lo guarda en el atributo
+del objeto.
+d) Método area(): para calcular el área de la circunferencia (Area = π ∗ radio!).
+e) Método perimetro(): para calcular el perímetro (Perimetro = 2 ∗ π ∗ radio).
+
+
+ */
+package ejercicion2poo;
+
+
+
+/**
+ *
+ * @author usuario
+ */
+public class Ejercicion2poo {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        Circunferencia circu = new Circunferencia();//Con el constructor vacio.
+        
+        circu.crearCircunferencia();//ingreso el radio por teclado.
+       
+ 
+        System.out.println(circu);
+        System.out.println("El perimetro es : "+circu.perimetros());
+        System.out.println("El area es: "+circu.area());
+//   Circunferencia circu2 = new Circunferencia(3);//crear una circunferencia con el constructor lleno.
+//    System.out.println("El perimetro es : "+circu2.perimetros());
+//        System.out.println("El area es: "+circu2.area());
+   
+   
+    }
+    
+    
+    ////////// CIRCUFERENCIA
+    package ejercicion2poo;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author usuario
+ */
+public class Circunferencia {
+    
+    private float radio;
+   
+
+    public Circunferencia(float radio) {
+        this.radio = radio;
+      
+    }
+    
+
+    Circunferencia() {
+       
+    }
+
+    public float getRadio() {
+        return radio;
+    }
+
+    public void setRadio(float radio) {
+        this.radio = radio;
+    }
+    
+    
+    public void crearCircunferencia(){
+        
+        Scanner entrada = new Scanner(System.in);
+        
+        System.out.println("Ingrese el radio: ");
+        radio = entrada.nextFloat();
+        
+         
+       
+       
+    }
+
+    
+    
+    
+    public double area(){
+        
+        
+       
+        
+        
+        
+        
+        
+         return  (float) (Math.PI * (radio*radio));
+        
+        
+        
+    }
+
+    @Override
+    public String toString() {
+        return "Circunferencia{" + "radio=" + radio + '}';
+    }
+
+   
+    
+    public double perimetros(){
+        
+ 
+        
+        
+        
+         return 2 *  (float) (Math.PI * radio);
+        
+        
+    }
+}
+    
+    
+    
+    
+}
