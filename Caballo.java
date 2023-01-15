@@ -8,15 +8,8 @@ package ejercicion1herencia;
  *
  * @author usuario
  */
-public class Perro extends Animal{
-    
-
-    
-    
-    
-    
-    
-    public  Perro(String nombre, String alimento, int edad, String raza){
+public class Caballo extends Animal{
+   public  Caballo(String nombre, String alimento, int edad, String raza){
         
         super(nombre, alimento, edad, raza);
        // this.sealimenta = sealimenta;
@@ -24,11 +17,8 @@ public class Perro extends Animal{
     }
     public  void Alimentarse(){
         
-        System.out.println("El perro llamado "+nombre+" se alimenta de: "+alimento);
-      
+        System.out.println("El caballo llamado "+nombre+" se alimenta de: "+alimento);
+       
       
     }
-    
-    
-    
 }
