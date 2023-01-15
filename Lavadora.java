@@ -1,7 +1,7 @@
 /*
 
  */
-package ejercicion2herencia;
+package ejercicion3herencia;
 
 /**
  *
@@ -24,7 +24,7 @@ public class Lavadora extends Electrodoméstico{
 
     @Override
     public String toString() {
-        return "Lavadora{" + "carga=" + carga + '}';
+        return "Lavadora " + " carga: " + carga ;
     }
 
     
@@ -42,7 +42,7 @@ public class Lavadora extends Electrodoméstico{
             
             aumento+=500;
         }
-        return  aumento ;
+        return  aumento;
     }
     
 }

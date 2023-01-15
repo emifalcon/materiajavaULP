@@ -1,7 +1,7 @@
 /*
 e
  */
-package ejercicion2herencia;
+package ejercicion3herencia;
 
 /**
  *
@@ -13,26 +13,61 @@ package ejercicion2herencia;
 public class Televisor extends  Electrodoméstico{
 
     
-    private double resolucion;
+    private float resolucion;
     
     private boolean  sintonizadorTDT;
 
+    public Televisor() {
+    }
+    
+    
+    
+
+    public float getResolucion() {
+        return resolucion;
+    }
+
+    public void setResolucion(float resolucion) {
+        this.resolucion = resolucion;
+    }
+
+    public boolean isSintonizadorTDT() {
+        return sintonizadorTDT;
+    }
+
+    public void setSintonizadorTDT(boolean sintonizadorTDT) {
+        this.sintonizadorTDT = sintonizadorTDT;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    
+    
+    
     @Override
   public double  precioFinal(){
       
       double elaumento = super.precioFinal();
       if (resolucion>40) {
-          elaumento += (this.getPrecio() * 0.3);
+          elaumento += (this.precio * 0.3);
       }
-        if (sintonizadorTDT) {
-            elaumento +=  500 ;
+        if (sintonizadorTDT==true) {
+            elaumento +=  500;
         }
       return elaumento ;
   }
 
+  
+  
     @Override
     public String toString() {
-        return "Televisor{" + "resolucion=" + resolucion + ", sintonizadorTDT=" + sintonizadorTDT + '}';
+        return "Televisor " + "resolucion: " + resolucion + ", sintonizadorTDT: " + sintonizadorTDT ;
     }
     
     

@@ -1,7 +1,7 @@
 /*
 
  */
-package ejercicion2herencia;
+package ejercicion3herencia;
 
 import java.util.Scanner;
 
@@ -69,7 +69,7 @@ public class Electrodoméstico {
     
     
         private  void ComprobarConsumoEnergetico(char consumoe){
-        Scanner entrada = new Scanner(System.in);
+       
         
         if (consumoe>=65 && consumoe<=70) {
                 this.consumoe = consumoe;
@@ -103,7 +103,7 @@ public class Electrodoméstico {
 
     @Override
     public String toString() {
-        return "Electrodom\u00e9stico{" + "precio=" + precio + ", color=" + color + ", consumoe=" + consumoe + ", peso=" + peso + '}';
+        return "precio Inicial: "+ precio + " color: " + color + ", consumo Energetico: " + consumoe + ", peso=" + peso ;
     }
     
     
